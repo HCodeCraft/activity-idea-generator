@@ -6,8 +6,7 @@
     "participants": 1,
     "price": "Free",
     "link": "https://www.youtube.com/watch?v=ssss7V1_eyA",
-    "index": "1",
-    "accessibility": 0.0
+    "index": "1"
   },
 
   {
@@ -16,8 +15,7 @@
     "participants":"1" ,
     "price": "Free",
     "link": "",
-    "index": "2",
-    "accessibility": 0.3
+    "index": "2"
   },
 
   {
@@ -26,18 +24,16 @@
     "participants": [1, 2],
     "price": "Free",
     "link": "",
-    "index": "3",
-    "accessibility": 0.3
+    "index": "3"
   },
 
   {
     "activity": "Go to the Library/Borrow an ebook",
-    "type": ["Entertainment", "Educational"],
+    "type": ["Entertainment", "Learning"],
     "participants": 1,
     "price": "Free",
     "link": "",
-    "key": "4",
-    "accessibility": 0.3
+    "key": "4"
   },
 
   {
@@ -46,18 +42,16 @@
     "participants":[ 1, 2],
     "price": "Free",
     "link": "",
-    "index": "5",
-    "accessibility": 0.3
+    "index": "5"
   },
 
   {
     "activity": "Start learning a new skill/hobby",
-    "type": ["Educational", "Art"],
+    "type": ["Learning", "Art"],
     "participants": [1, 2],
     "price": ["Free", "Variable"],
     "link": "www.youtube.com",
-    "index": "6",
-    "accessibility": 0.0
+    "index": "6"
   },
 
   {
@@ -66,8 +60,7 @@
     "participants": [1, 2],
     "price": ["Low", "Variable"],
     "link": "",
-    "index": "7",
-    "accessibility": 0.3
+    "index": "7"
   },
 
   {
@@ -76,8 +69,7 @@
     "participants": 1 ,
     "price": "Free",
     "link": "",
-    "index": "8",
-    "accessibility": 0.2
+    "index": "8"
   },
 
   {
@@ -86,8 +78,7 @@
     "participants": [1, 2],
     "price": ["Low", "Variable"],
     "link": "",
-    "index": "9",
-    "accessibility": 0.0
+    "index": "9"
   },
 
   {
@@ -96,18 +87,16 @@
     "participants": 1,
     "price": "Free",
     "link": "",
-    "index": "10",
-    "accessibility": 0.0
+    "index": "10"
   },
 
   {
     "activity": "Have a movie night",
     "type": ["Social", "Entertainment"],
     "participants": [1, 2, 3],
-    "price": 0,
+    "price": ["Free", "Low"],
     "link": "",
-    "index": "11",
-    "accessibility": 0.0
+    "index": "11"
   },
 
   {
@@ -116,8 +105,7 @@
     "participants": [1, 2],
     "price": ["Low", "Variable"],
     "link": "",
-    "index": "12",
-    "accessibility": 0.0
+    "index": "12"
   },
 
   {
@@ -126,8 +114,7 @@
     "participants": 1,
     "price": "Free",
     "link": "www.youtuble.com",
-    "index": "13",
-    "accessibility": 0.0
+    "index": "13"
   },
 
   {
@@ -136,8 +123,7 @@
     "participants": 1,
     "price": ["Free", "Low"],
     "link": "",
-    "index": "14",
-    "accessibility": 0.0
+    "index": "14"
   },
 
   {
@@ -146,8 +132,7 @@
     "participants": [1, 2],
     "price": "Variable",
     "link": "",
-    "index": "15",
-    "accessibility": 0.0
+    "index": "15"
   },
 
   {
@@ -156,8 +141,7 @@
     "participants": [1, 2],
     "price": ["Medium",  "Expensive"],
     "link": "",
-    "index": "16",
-    "accessibility": 0.0
+    "index": "16"
   },
 
   {
@@ -166,8 +150,7 @@
     "participants": 1,
     "price": "Free",
     "link": "www.youtube.com",
-    "inxdex": "17",
-    "accessibility": 0.0
+    "index": "17"
   },
 
   {
@@ -176,8 +159,7 @@
     "participants": [1, 2],
     "price": 0,
     "link": "https://www.youtube.com/watch?v=GWIEON0VSaY",
-    "index": "18",
-    "accessibility": 0.0
+    "index": "18"
   },
 
   {
@@ -186,8 +168,7 @@
     "participants": 1,
     "price": "Free",
     "link": "",
-    "index": "19",
-    "accessibility": 0.0
+    "index": "19"
   },
 
   {
@@ -196,8 +177,7 @@
     "participants": 1,
     "price": "Low",
     "link": "",
-    "index": "20",
-    "accessibility": 0.0
+    "index": "20"
   },
 
   {
@@ -206,8 +186,7 @@
     "participants": 1,
     "price": ["Variable", "Meduium", "Expensive"],
     "link": "",
-    "index": "21",
-    "accessibility": 0.0
+    "index": "21"
   },
 
   {
@@ -216,8 +195,7 @@
     "participants": 1,
     "price": ["Variable", "Meduium", "Expensive"],
     "link": "",
-    "index": "22",
-    "accessibility": 0.0
+    "index": "22"
   },
 
   {
@@ -226,8 +204,7 @@
     "participants": [1, 2],
     "price": ["Variable", "Meduium", "Expensive"],
     "link": "www.youtube.com",
-    "index": "23",
-    "accessibility": 0.0
+    "index": "23"
   },
 
   {
@@ -236,8 +213,25 @@
     "participants": 1,
     "price": ["Meduium", "Expensive"],
     "link": "",
-    "index": "24",
-    "accessibility": 0.0
+    "index": "24"
+  },
+
+  {
+    "activity": "Plan a night of dancing",
+    "type": "Social",
+    "participants": [2, 3],
+    "price": ["Medium"],
+    "link": "",
+    "index": "25"
+  },
+
+  {
+    "activity": "Sign up for a meetup.com activity",
+    "type": "Social",
+    "participants": [1, 2],
+    "price": ["Free", "Variable"],
+    "link": "www.meetup.com",
+    "index": "24"
   }
 
 ]
