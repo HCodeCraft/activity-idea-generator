@@ -4,6 +4,45 @@ body {
     font-family: arial;
 }
 
+.flexbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column
+
+
+}
+
+ .search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.dropdown-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.card-box {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+
+}
+
+.fave-box {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
 ul {
     margin:0;
     padding:0;
