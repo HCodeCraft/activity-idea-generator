@@ -1,12 +1,51 @@
 body {
-    background-color: #ffda94
+    background-color: #ffda94;
+    background-size: cover;
+    font-family: arial;
+}
+
+ul {
+    margin:0;
+    padding:0;
+    list-style:none;
+    
+}
+
+ul li {
+    float: left;
+    width:200px;
+    height:40px;
+    background-color:#e28f3c;
+    opacity: .9;
+    line-height: 40p;
+    text-align: center;
+    font-size: 20px;
+    
+}
+
+ul li a {
+    text-decoration:none;
+    color:brown;
+    display:block;
+}
+
+ul li a:hover{
+    background-color: #4a330f;
+}
+
+ul li ul li {
+    display:none;
+}
+
+ul li:hover ul li{
+    display:block;
 }
 
 h1, h2 {
-    color:#8b4f21
+    color:#8b4f21;
 }
 
 button {
-    padding: 5px
+    padding: 5px;
 }
 
