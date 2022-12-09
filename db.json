@@ -1,236 +1,236 @@
-
-
-  {
+{ "activities":
+  [{
   "activity": "Meditate",
-  "type": "Relaxation",
-  "participants": 1,
-  "price": "Free",
+  "type": ["Relaxation"],
+  "participants": [1],
+  "price": ["Free"],
   "link": "https://www.youtube.com/watch?v=ssss7V1_eyA",
   "index": 1
-},
+  },
 
-{
-  "activity": "Go for a walk/roll",
-  "type":[ "Relaxation", "Excersize"],
-  "participants":"1" ,
-  "price": "Free",
-  "link": "",
-  "index": 2
-},
+  {
+    "activity": "Go for a walk/roll",
+    "type":["Relaxation", "Excersize"],
+    "participants":[1],
+    "price": ["Free"],
+    "link": "",
+    "index": 2
+  },
 
-{
-  "activity": "Go for a walk and take photos",
-  "type": ["Art", "Relaxation"],
-  "participants": [1, 2],
-  "price": "Free",
-  "link": "",
-  "index": 3
-},
+  {
+    "activity": "Go for a walk and take photos",
+    "type": ["Art", "Relaxation"],
+    "participants": [1, 2],
+    "price": ["Free"],
+    "link": "",
+    "index": 3
+  },
 
-{
-  "activity": "Go to the Library/Borrow an ebook",
-  "type": ["Entertainment", "Learning"],
-  "participants": 1,
-  "price": "Free",
-  "link": "",
-  "key": 4
-},
+  {
+    "activity": "Go to the Library/Borrow an ebook",
+    "type": ["Entertainment", "Learning"],
+    "participants": [1],
+    "price": ["Free"],
+    "link": "",
+    "key": 4
+  },
 
-{
-  "activity": "Rearrange your furniture",
-  "type": "Organizing",
-  "participants":[ 1, 2],
-  "price": "Free",
-  "link": "",
-  "index": 5
-},
+  {
+    "activity": "Rearrange your furniture",
+    "type": ["Organizing"],
+    "participants":[ 1, 2],
+    "price": ["Free"],
+    "link": "",
+    "index": 5
+  },
 
-{
-  "activity": "Start learning a new skill/hobby",
-  "type": ["Learning", "Art"],
-  "participants": [1, 2],
-  "price": ["Free", "Variable"],
-  "link": "www.youtube.com",
-  "index": 6
-},
+  {
+    "activity": "Start learning a new skill/hobby",
+    "type": ["Learning", "Art"],
+    "participants": [1, 2],
+    "price": ["Free", "Variable"],
+    "link": "www.youtube.com",
+    "index": 6
+  },
 
-{
-  "activity": "Go out for coffee",
-  "type": ["Social",  "Food"],
-  "participants": [1, 2],
-  "price": ["Low", "Variable"],
-  "link": "",
-  "index": 7
-},
+  {
+    "activity": "Go out for coffee",
+    "type": ["Social",  "Food"],
+    "participants": [1, 2],
+    "price": ["Low", "Variable"],
+    "link": "",
+    "index": 7
+  },
 
-{
-  "activity": "Message a friend",
-  "type": "Social",
-  "participants": 1 ,
-  "price": "Free",
-  "link": "",
-  "index": 8
-},
+  {
+    "activity": "Message a friend",
+    "type": ["Social"],
+    "participants": [1 ],
+    "price": ["Free"],
+    "link": "",
+    "index": 8
+  },
 
-{
-  "activity": "Tackle a DIY project",
-  "type": "Art",
-  "participants": [1, 2],
-  "price": ["Low", "Variable"],
-  "link": "",
-  "index": 9
-},
+  {
+    "activity": "Tackle a DIY project",
+    "type": ["Art"],
+    "participants": [1, 2],
+    "price": ["Low", "Variable"],
+    "link": "",
+    "index": 9
+  },
 
-{
-  "activity": "Journal",
-  "type": "Relaxation",
-  "participants": 1,
-  "price": "Free",
-  "link": "",
-  "index": 10
-},
+  {
+    "activity": "Journal",
+    "type": ["Relaxation"],
+    "participants": [1],
+    "price": ["Free"],
+    "link": "",
+    "index": 10
+  },
 
-{
-  "activity": "Have a movie night",
-  "type": ["Social", "Entertainment"],
-  "participants": [1, 2, 3],
-  "price": ["Free", "Low"],
-  "link": "",
-  "index": 11
-},
+  {
+    "activity": "Have a movie night",
+    "type": ["Social", "Entertainment"],
+    "participants": [1, 2, 3],
+    "price": ["Free", "Low"],
+    "link": "",
+    "index": 11
+  },
 
-{
-  "activity": "Bake something delicious",
-  "type": "Food",
-  "participants": [1, 2],
-  "price": ["Low", "Variable"],
-  "link": "",
-  "index": 12
-},
+  {
+    "activity": "Bake something delicious",
+    "type": ["Food"],
+    "participants": [1, 2],
+    "price": ["Low", "Variable"],
+    "link": "",
+    "index": 12
+  },
 
-{
-  "activity": "Draw",
-  "type": "Art",
-  "participants": 1,
-  "price": "Free",
-  "link": "www.youtuble.com",
-  "index": 13
-},
+  {
+    "activity": "Draw a picture and tape it somewhere",
+    "type": ["Art"],
+    "participants": [1],
+    "price": ["Free"],
+    "link": "www.youtuble.com",
+    "index": 13
+  },
 
-{
-  "activity": "Clean for 10 minutes",
-  "type": "Organizing",
-  "participants": 1,
-  "price": ["Free", "Low"],
-  "link": "",
-  "index": 14
-},
+  {
+    "activity": "Clean for 10 minutes",
+    "type": ["Organizing"],
+    "participants": [1, 2],
+    "price": ["Free", "Low"],
+    "link": "",
+    "index": 14
+  },
 
-{
-  "activity": "Redecorate your home",
-  "type": "Organizing",
-  "participants": [1, 2],
-  "price": "Variable",
-  "link": "",
-  "index": 15
-},
+  {
+    "activity": "Redecorate your home",
+    "type": ["Organizing"],
+    "participants": [1, 2],
+    "price": ["Variable"],
+    "link": "",
+    "index": 15
+  },
 
-{
-  "activity": "Order Takeout",
-  "type": "Food",
-  "participants": [1, 2],
-  "price": ["Medium",  "Expensive"],
-  "link": "",
-  "index": 16
-},
+  {
+    "activity": "Order Takeout",
+    "type": ["Food"],
+    "participants": [1, 2],
+    "price": ["Medium",  "Expensive"],
+    "link": "",
+    "index": 16
+  },
 
-{
-  "activity": "Watch something funny (show or clip)",
-  "type": "Entertainment",
-  "participants": 1,
-  "price": "Free",
-  "link": "www.youtube.com",
-  "index": 17
-},
+  {
+    "activity": "Watch something funny (show or clip)",
+    "type": ["Entertainment"],
+    "participants": [1],
+    "price": ["Free"],
+    "link": "www.youtube.com",
+    "index": 17
+  },
 
-{
-  "activity": "Do crunches",
-  "type": "Excersize",
-  "participants": [1, 2],
-  "price": "Free",
-  "link": "https://www.youtube.com/watch?v=GWIEON0VSaY",
-  "index": 18
-},
+  {
+    "activity": "Do crunches",
+    "type": ["Excersize"],
+    "participants": [1, 2],
+    "price": ["Free"],
+    "link": "https://www.youtube.com/watch?v=GWIEON0VSaY",
+    "index": 18
+  },
 
-{
-  "activity": "Plan your meals for the next week",
-  "type": "Food",
-  "participants": 1,
-  "price": "Free",
-  "link": "",
-  "index": 19
-},
+  {
+    "activity": "Plan your meals for the next week",
+    "type": ["Food"],
+    "participants": [1],
+    "price": ["Free"],
+    "link": "",
+    "index": 19
+  },
 
-{
-  "activity": "Buy yourself a little treat",
-  "type": "Shopping",
-  "participants": 1,
-  "price": "Low",
-  "link": "",
-  "index": 20
-},
+  {
+    "activity": "Buy yourself a little treat",
+    "type": ["Shopping"],
+    "participants": [1],
+    "price": ["Low"],
+    "link": "",
+    "index": 20
+  },
 
-{
-  "activity": "Buy yourself a present",
-  "type": "Shopping",
-  "participants": 1,
-  "price": ["Variable", "Cheap", "Meduium", "Expensive"],
-  "link": "",
-  "index": 21
-},
+  {
+    "activity": "Buy yourself a present",
+    "type": ["Shopping"],
+    "participants": [1],
+    "price": ["Variable", "Cheap", "Meduium", "Expensive"],
+    "link": "",
+    "index": 21
+  },
 
-{
-  "activity": "Buy a loved one a present",
-  "type": "Shopping",
-  "participants": 1,
-  "price": ["Variable", "Meduium", "Expensive"],
-  "link": "",
-  "index": 22
-},
+  {
+    "activity": "Buy a loved one a present",
+    "type": ["Shopping"],
+    "participants": [1],
+    "price": ["Variable", "Meduium", "Expensive"],
+    "link": "",
+    "index": 22
+  },
 
-{
-  "activity": "Make a seasonal decoration with origami",
-  "type": "Art",
-  "participants": [1, 2],
-  "price": ["Variable", "Cheap"],
-  "link": "www.youtube.com",
-  "index": 23
-},
+  {
+    "activity": "Make a seasonal decoration with origami",
+    "type": ["Art"],
+    "participants": [1, 2],
+    "price": ["Variable", "Cheap"],
+    "link": "www.youtube.com",
+    "index": 23
+  },
 
-{
-  "activity": "Make a disaster preparedness kit",
-  "type": "Shopping",
-  "participants": 1,
-  "price": ["Meduium", "Expensive"],
-  "link": "",
-  "index": 24
-},
+  {
+    "activity": "Make a disaster preparedness kit",
+    "type": ["Shopping"],
+    "participants": [1],
+    "price": ["Meduium", "Expensive"],
+    "link": "",
+    "index": 24
+  },
 
-{
-  "activity": "Plan a night of dancing",
-  "type": "Social",
-  "participants": [2, 3],
-  "price": ["Medium"],
-  "link": "",
-  "index": 25
-},
+  {
+    "activity": "Plan a night of dancing",
+    "type": ["Social"],
+    "participants": [2, 3],
+    "price": ["Medium"],
+    "link": "",
+    "index": 25
+  },
 
-{
-  "activity": "Sign up for a meetup.com activity",
-  "type": "Social",
-  "participants": [1, 2],
-  "price": ["Free", "Variable"],
-  "link": "www.meetup.com",
-  "index": 24
-}
+  {
+    "activity": "Sign up for a meetup.com activity",
+    "type": ["Social"],
+    "participants": [1, 2],
+    "price": ["Free", "Variable"],
+    "link": "www.meetup.com",
+    "index": 24
+  }
 
+  ]}
