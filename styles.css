@@ -104,6 +104,10 @@ h2, h3 {
     font-family: 'Rubik', sans-serif;
 }
 
+h3 {
+    color:brown;
+}
+
 
 button {
     padding: 5px;
