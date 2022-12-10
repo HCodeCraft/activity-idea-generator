@@ -24,50 +24,64 @@
 
         </div>
         <div class="search-box">
-            <h3 class="searchtext">Search for ideas:</h3>
-            <form id="form"> 
+
+            <div class="search-wrapper">
+                <label for="search">Search activities</label>
+                <input type="search" id="search">
+
+
+
+
+
+
+            </div>
+
+         
+            <!-- <form id="form"> 
                 <input type="search" id="query" name="q" placeholder="Search..." data-search>
                 <button class="searchbtn">Search</button><button class="random">Random!</button>
-            </form>
+            </form> -->
             <!--Search bar w/submit button (<img class="mag" src=magglass.png>), followed by a Random button-->
+        
         </div>
         <div class="dropdown-box">
 
             <!--Dropdown menu that says Show All Activities Where:-->
-            <h3> Show all activites that:</h3>
+            <h3> Show all activites with:</h3>
             <br>
             <ul>
             <li><a href="#"># of People</a>
                 <ul>
-                    <li><a href="#">Are for 1 person</a></li>
-                    <li><a href="#">Are for 2 people</a></li>
-                    <li><a href="">Are for 3 people</a></li>
+                    <li class="one"><a href="#">Are for 1 person</a></li>
+                    <li class="two"><a href="#">Are for 2 people</a></li>
+                    <li class="three"><a href="">Are for 3 people</a></li>
                 </ul>
             </li>
 
             <li><a href="#">Category </a>
                 <ul>
-                    <li><a href="">Relaxation</a></li>
-                    <li><a href="">Excersize</a></li>
-                    <li><a href="">Art</a></li>
-                    <li><a href="">Learning</a></li>
-                    <li><a href="">Entertainment</a></li>
-                    <li><a href="">Organizing</a></li>
-                    <li><a href="">Food</a></li>
-                    <li><a href="">Shopping</a></li>
+                    <li class="relaxation"><a href="#">Relaxation</a></li>
+                    <li class="excersize"><a href="#">Excersize</a></li>
+                    <li class="art"><a href="#">Art</a></li>
+                    <li class="learning"><a href="#">Learning</a></li>
+                    <li class="entertainment"><a href="#">Entertainment</a></li>
+                    <li class="organizing"><a href="#">Organizing</a></li>
+                    <li class="food"><a href="#">Food</a></li>
+                    <li class="shopping"><a href="#">Shopping</a></li>
                 </ul>
             </li>
             <li><a href="#">Price </a>
             <ul>
-                <li><a href="#">Variable</a></li>
-                <li><a href="#">Free</a></li>
-                <li><a href="#">Low</a></li>
-                <li><a href="#">Medium</a></li>
-                <li><a href="#">Expensive</a></li>
+                <li class="variable"><a href="#">Variable</a></li>
+                <li class="free"><a href="#">Free</a></li>
+                <li class="low"><a href="#">Low</a></li>
+                <li class="medium"><a href="#">Medium</a></li>
+                <li class="expensive"><a href="#">Expensive</a></li>
             </ul>
             </li>
     </div>
     <div class="card-box">
+        <ul class="card-group" id="list"></ul>
 
 
 
@@ -116,19 +130,6 @@
 
 
 
-<div class="activity-cards" activity-user-cards-container>
-    <template activity-card-template>
-        <div class="card">
-            <div class="header" data-header></div>
-            <div class="body" data-body></div>
-        </div>
-
-
-
-
-
-
-    </template>
 
 
 
