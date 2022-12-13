@@ -23,14 +23,23 @@
             <!--Add Spice graphic here-->
 
         </div>
-        <div class="search-box">
-
-            <h3 class="searchtext"> Show all activites with:</h3>
+        <div class="add-box">
+            <h3>Add an Activity:</h3>
             <br>
-            <form id="form"> 
-                <input type="search" id=searchbox name="q" placeholder="Search..." data-search>
-                <button class="searchbtn">Search</button><button class="random">Random!</button>
-            </form>
+            <form action="/action_page.php" method="get">
+                <label for="fname">Activity name:</label>
+                <input type="text" id="aname" name="aname"><br><br>
+                <!--Dropdown for activity type-->
+                <!--Dropdown for participants-->
+                <!--Dropdown for price-->
+
+                <label for="link">Link:</label>
+                <input type="text" id="link" name="link"><br><br>
+                <input type="submit" value="Submit">
+              </form>
+              <br>
+              <br>
+
             <!--Search bar w/submit button (<img class="mag" src=magglass.png>), followed by a Random button -->
         
         </div>

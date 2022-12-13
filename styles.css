@@ -21,10 +21,12 @@ html {
 
 }
 
- .search-box {
+ .add-box {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 3%;
+    flex-direction:column
 
 
 }
