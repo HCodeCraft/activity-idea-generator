@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
    let actList = data.activities
     // 1 person
-console.log("onePersonLink", onePersonLink)
+
 onePersonLink.addEventListener("click", (event) => {
 console.log("onePersonLink", onePersonLink)
 let oneResult = actList.filter(activity => activity.participants == "1");
@@ -112,16 +112,17 @@ console.log("result", oneResult) // Working
 
 buildCard(oneResult) // not working
 
-}) }) 
+})
 
 //2 people
 
+console.log("twoPeopleLink",twoPeopleLink)
+console.log("actList", actList)
+twoPeopleLink.addEventListener("click", (event) => {
 
-document.addEventListener("click", (event) => {
-console.log("twoPeopleLink", twoPeopleLink)
-let twoResult = actList.filter(activity => activity.participants == "2");
+let twoResult = actList.filter(activity => activity.participants[0] == "2" || activity.participants[1] == "2");
 
-console.log("result", twoResult) // Working
+console.log("twoResult", twoResult) // Working
 
 buildCard(twoResult) // not working
 
@@ -130,7 +131,7 @@ buildCard(twoResult) // not working
 
 threeLink.addEventListener("click", (event) => {
 console.log("threeLink", threeLink)
-let Result = actList.filter(activity => activity.participants == "3");
+let Result = actList.filter(activity => activity.participants[1] == "3" || activity.participants[2] == "3" || activity.participants[3]== "3");
 
 console.log("threeResult", threeResult) // Working
 
@@ -142,7 +143,7 @@ buildCard(threeResult) // not working
 
 relLink.addEventListener("click", (event) => {
 console.log("relLink", relLink)
-let relResult = actList.filter(activity => activity.type == "relaxation");
+let relResult = actList.filter(activity => activity.type[0] == "Relaxation" || activity.type[1]== "Relaxation");
 
 console.log("result", relResult) // Working
 
@@ -155,7 +156,7 @@ buildCard(relResult) // not working
 
 exLink.addEventListener("click", (event) => {
 console.log("exLink", exLink)
-let Result = actList.filter(activity => activity.type == "Excersize");
+let Result = actList.filter(activity => activity.type[0] == "Excersize" || activity.type[1] == "Excersize");
 
 console.log("exResult", exResult) // Working
 
@@ -168,7 +169,7 @@ buildCard(exResult) // not working
 
 artLink.addEventListener("click", (event) => {
 console.log("artLink", artLink)
-let Result = actList.filter(activity => activity.type== "Art");
+let Result = actList.filter(activity => activity.type[0]== "Art" || activity.type[1] == "Art");
 
 console.log("artResult", artResult) // Working
 
@@ -181,7 +182,7 @@ buildCard(artResult) // not working
 
 leaLink.addEventListener("click", (event) => {
 console.log("leaLink", leaLink)
-let leaResult = actList.filter(activity => activity.type == "Learning");
+let leaResult = actList.filter(activity => activity.type[0] == "Learning" || activity.type[1] == "Learning");
 
 console.log("leaResult", leaResult) // Working
 
@@ -193,7 +194,7 @@ buildCard(leaResult) // not working
 
 entLink.addEventListener("click", (event) => {
 console.log("entLink", entLink)
-let entResult = actList.filter(activity => activity.type == "Entertainment");
+let entResult = actList.filter(activity => activity.type[0] == "Entertainment" || activity.type[1] == "Entertainment");
 
 console.log("entResult", entResult) // Working
 
@@ -205,7 +206,7 @@ buildCard(entResult) // not working
 
 orgLink.addEventListener("click", (event) => {
 console.log("orgLink", orgLink)
-let orgResult = actList.filter(activity => activity.type == "Organizing");
+let orgResult = actList.filter(activity => activity.type[0] == "Organizing" || activity.type[1] == "Organizing");
 
 console.log("orgResult", orgResult) // Working
 
@@ -218,7 +219,7 @@ buildCard(orgResult) // not working
 
 foodLink.addEventListener("click", (event) => {
 console.log("foodLink", foodLink)
-let foodResult = actList.filter(activity => activity.type == "Food");
+let foodResult = actList.filter(activity => activity.type[0] == "Food" || activity.type[1] == "Food");
 
 console.log("foodResult", foodResult) // Working
 
@@ -230,7 +231,7 @@ buildCard(foodResult) // not working
 
 shopLink.addEventListener("click", (event) => {
 console.log("shopLink", shopLink)
-let Result = actList.filter(activity => activity.type == "Shopping");
+let Result = actList.filter(activity => activity.type[0] == "Shopping" || activity.type[1] == "Shopping");
 
 console.log("shopResult", shopResult) // Working
 
@@ -243,7 +244,7 @@ buildCard(shopResult) // not working
 
 socialLink.addEventListener("click", (event) => {
 console.log("socialLink", socialLink)
-let socialResult = actList.filter(activity => activity.type == "Social");
+let socialResult = actList.filter(activity => activity.type[0] == "Social" || activity.type[1] == "Social");
 
 console.log("socialResult", socialResult) // Working
 
@@ -256,7 +257,7 @@ buildCard(socialResult) // not working
 
 varLink.addEventListener("click", (event) => {
 console.log("varLink", varLink)
-let varResult = actList.filter(activity => activity.price == "Variable");
+let varResult = actList.filter(activity => activity.price[0] == "Variable" || activity.price[1] == "Variable" || activity.price[2] == "Variable");
 
 console.log("varResult", varResult) // Working
 
@@ -267,24 +268,24 @@ buildCard(varResult) // not working
 // Free
 
 freeLink.addEventListener("click", (event) => {
-console.log("Link", Link)
-let Result = actList.filter(activity => activity.price == "");
+console.log("freeLink", freeLink)
+let freeResult = actList.filter(activity => activity.price[0] == "Free" || activity.price[1] == "Free" || activity.price[2]== "Free");
 
-console.log("result", twoResult) // Working
+console.log("freeResult", freeResult) // Working
 
-buildCard(Result) // not working
+buildCard(freeResult) // not working
 
 })
 
 // Low
 
 lowLink.addEventListener("click", (event) => {
-console.log("Link", Link)
-let Result = actList.filter(activity => activity.price == "");
+console.log("lowLink", lowLink)
+let lowResult = actList.filter(activity => activity.price[0] == "Low" || activity.price[1] == "Low");
 
-console.log("result", twoResult) // Working
+console.log("lowResult", lowResult) // Working
 
-buildCard(Result) // not working
+buildCard(lowResult) // not working
 
 })
 
@@ -292,26 +293,28 @@ buildCard(Result) // not working
 
 medLink.addEventListener("click", (event) => {
 console.log("Link", Link)
-let Result = actList.filter(activity => activity.price == "");
+let medResult = actList.filter(activity => activity.price[0] == "Medium" || activity.price[1] == "Medium" || activity.price[2]== "Medium");
 
-console.log("result", twoResult) // Working
+console.log("medResult", medResult) // Working
 
-buildCard(Result) // not working
+buildCard(medResult) // not working
 
 })
 
 // Expensive
 
 expLink.addEventListener("click", (event) => {
-console.log("Link", Link)
-let Result = actList.filter(activity => activity.price == "");
+console.log("expLink", expLink)
+let expResult = actList.filter(activity => activity.price[0] == "Expensive" || activity.price[1] == "Expensive" || activity.price[2] == "Expensive" || activity.price[3] == "Expensive");
 
-console.log("result", twoResult) // Working
+console.log("expResult", expResult) // Working
 
-buildCard(Result) // not working
+buildCard(expResult) // not working
 
 })
 
+
+})
 
 })
 
