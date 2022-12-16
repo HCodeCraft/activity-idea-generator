@@ -1,4 +1,5 @@
 
+
 const form = document.getElementById('form') 
 
 let aname = document.getElementById('aname')
@@ -26,28 +27,39 @@ const artLink = document.querySelector('.art')
 const exLink = document.querySelector('.excersize')
 const relLink = document.querySelector('.relaxation')
 
+let myTable = document.querySelector('#table');
+let headers = ['Activity', 'Type', 'People', 'Price', 'Link', 'Index']
+
+const randomBtn = document.querySelector('#random')
+
 
 
 let actList;
 
 let result;
 
-function addNewActivity(newActivityObj){
+// const fs = require('fs');
+
+// fs.readFile('db.json', 'utf8', (err, data) => {
+//     if(err){
+//         console.error(err);
+//         return;
+//     }
+//     console.log(data)
+
+// })
 
 
-    fetch('db.json', {
-        method: 'POST',
-        headers: {
-            'Accept' : 'application/json',
-            'Content-Type': 'application/json'
-        },
-        body:JSON.stringify(newActivityObj)
-        
-    })
-    // .then(res => res.json())
-    // .then(activity => console.log("This is the activity", activity))
+// function addNewActivity(newActivityObj){
 
-} 
+//     fs.writeFile('db.json', newActivityObj, err => {
+//         if (err){
+//             console.err;
+//             return;
+//         }
+//     })
+
+// } 
 
 
 form.addEventListener("submit", (event) => {
@@ -57,9 +69,6 @@ fetch('db.json')
 .then(res => res.json())
 .then(data => {
     console.log(data)
-    // console.log("activity list", data.activities)
-    // console.log(data.activities[0])
-    // console.log(data.activities[0].activity)
 
     actList = data.activities
 
@@ -72,27 +81,61 @@ fetch('db.json')
        
     }
 
-    // addNewActivity(newActivityObj) Not working :(
+    addNewActivity(newActivityObj)
 
 
 
 })})
 
 
-function buildCard(results){
 
-    for (const activity of results){
-        const resultItem = document.createElement('p')
-        resultItem.classList.add('result-item')
-        const text = document.createTextNode(activity.activity, activity.type, activity.participants, activity.price, activity.link)
-        resultItem.appendChild(text)
-        list.appendChild(resultItem)
-    } 
-    if (results.length ===0){
-        console.log("No results!!")
-    }
+
+
+function buildTable(results){
+    
+    let table = document.createElement('table');
+    let headerRow = document.createElement('tr');
+
+
+    headers.forEach(indHeader =>{
+        let header = document.createElement('th');
+        let textNode = document.createTextNode(indHeader);
+        header.appendChild(textNode);
+        headerRow.appendChild(header);
+
+    })
+
+    table.appendChild(headerRow);
+
+    console.log("Results", results)
+    results.forEach(result => {
+        let row = document.createElement('tr');
+        console.log("Object Values for results", Object.values(results))
+
+        // let stringResult = JSON.stringify(results)
+
+      
+        Object.values(result).forEach(text => {
+            let cell = document.createElement('td');
+            let textNode = document.createTextNode(text);
+            cell.appendChild(textNode);
+            row.appendChild(cell);
+
+
+        })
+
+        table.appendChild(row);
+
+
+
+    })
+
+    myTable.appendChild(table);
 
 }
+
+
+
 
 document.addEventListener("DOMContentLoaded", (e) => {
     console.log("The DOM content has been loaded!")
@@ -102,6 +145,52 @@ document.addEventListener("DOMContentLoaded", (e) => {
     
 
    let actList = data.activities
+
+   // Random
+   randomBtn.addEventListener("click" , (event) => {
+
+    let rndmNum = actList[actList.length * Math.random() | 0] 
+
+    let table = document.createElement('table');
+    let headerRow = document.createElement('tr');
+
+    headers.forEach(indHeader =>{
+        let header = document.createElement('th');
+        let textNode = document.createTextNode(indHeader);
+        header.appendChild(textNode);
+        headerRow.appendChild(header);
+
+    })
+
+    table.appendChild(headerRow);
+
+    let row = document.createElement('tr'); // need to make one for each field?
+      
+
+    
+    Object.values(rndmNum).forEach(value => {
+
+        let cell = document.createElement('td');
+        let textNode = document.createTextNode(value);
+        cell.appendChild(textNode);
+        row.appendChild(cell);
+
+    })
+
+
+
+    table.appendChild(row);
+
+
+
+
+myTable.appendChild(table);
+
+})    
+
+
+
+
     // 1 person
 
 onePersonLink.addEventListener("click", (event) => {
@@ -110,7 +199,7 @@ let oneResult = actList.filter(activity => activity.participants == "1");
 
 console.log("result", oneResult) // Working
 
-buildCard(oneResult) // not working
+buildTable(oneResult) // not working
 
 })
 
@@ -124,18 +213,18 @@ let twoResult = actList.filter(activity => activity.participants[0] == "2" || ac
 
 console.log("twoResult", twoResult) // Working
 
-buildCard(twoResult) // not working
+buildTable(twoResult) // not working
 
 })
 // 3 people
 
 threeLink.addEventListener("click", (event) => {
 console.log("threeLink", threeLink)
-let Result = actList.filter(activity => activity.participants[1] == "3" || activity.participants[2] == "3" || activity.participants[3]== "3");
+let threeResult = actList.filter(activity => activity.participants[1] == "3" || activity.participants[2] == "3" || activity.participants[3]== "3");
 
 console.log("threeResult", threeResult) // Working
 
-buildCard(threeResult) // not working
+buildTable(threeResult) // not working
 
 })
 
@@ -147,7 +236,7 @@ let relResult = actList.filter(activity => activity.type[0] == "Relaxation" || a
 
 console.log("result", relResult) // Working
 
-buildCard(relResult) // not working
+buildTable(relResult) // not working
 
 })
 
@@ -156,11 +245,11 @@ buildCard(relResult) // not working
 
 exLink.addEventListener("click", (event) => {
 console.log("exLink", exLink)
-let Result = actList.filter(activity => activity.type[0] == "Excersize" || activity.type[1] == "Excersize");
+let exResult = actList.filter(activity => activity.type[0] == "Excersize" || activity.type[1] == "Excersize");
 
 console.log("exResult", exResult) // Working
 
-buildCard(exResult) // not working
+buildTable(exResult) // not working
 
 })
 
@@ -169,11 +258,11 @@ buildCard(exResult) // not working
 
 artLink.addEventListener("click", (event) => {
 console.log("artLink", artLink)
-let Result = actList.filter(activity => activity.type[0]== "Art" || activity.type[1] == "Art");
+let artResult = actList.filter(activity => activity.type[0]== "Art" || activity.type[1] == "Art");
 
 console.log("artResult", artResult) // Working
 
-buildCard(artResult) // not working
+buildTable(artResult) // not working
 
 })
 
@@ -186,7 +275,7 @@ let leaResult = actList.filter(activity => activity.type[0] == "Learning" || act
 
 console.log("leaResult", leaResult) // Working
 
-buildCard(leaResult) // not working
+buildTable(leaResult) // not working
 
 })
 
@@ -198,7 +287,7 @@ let entResult = actList.filter(activity => activity.type[0] == "Entertainment" |
 
 console.log("entResult", entResult) // Working
 
-buildCard(entResult) // not working
+buildTable(entResult) // not working
 
 })
 
@@ -210,7 +299,7 @@ let orgResult = actList.filter(activity => activity.type[0] == "Organizing" || a
 
 console.log("orgResult", orgResult) // Working
 
-buildCard(orgResult) // not working
+buildTable(orgResult) // not working
 
 })
 
@@ -223,7 +312,7 @@ let foodResult = actList.filter(activity => activity.type[0] == "Food" || activi
 
 console.log("foodResult", foodResult) // Working
 
-buildCard(foodResult) // not working
+buildTable(foodResult) // not working
 
 })
 
@@ -235,7 +324,7 @@ let Result = actList.filter(activity => activity.type[0] == "Shopping" || activi
 
 console.log("shopResult", shopResult) // Working
 
-buildCard(shopResult) // not working
+buildTable(shopResult) // not working
 
 })
 
@@ -248,7 +337,7 @@ let socialResult = actList.filter(activity => activity.type[0] == "Social" || ac
 
 console.log("socialResult", socialResult) // Working
 
-buildCard(socialResult) // not working
+buildTable(socialResult) // not working
 
 })
 
@@ -261,7 +350,7 @@ let varResult = actList.filter(activity => activity.price[0] == "Variable" || ac
 
 console.log("varResult", varResult) // Working
 
-buildCard(varResult) // not working
+buildTable(varResult) // not working
 
 })
 
@@ -273,7 +362,7 @@ let freeResult = actList.filter(activity => activity.price[0] == "Free" || activ
 
 console.log("freeResult", freeResult) // Working
 
-buildCard(freeResult) // not working
+buildTable(freeResult) // not working
 
 })
 
@@ -285,7 +374,7 @@ let lowResult = actList.filter(activity => activity.price[0] == "Low" || activit
 
 console.log("lowResult", lowResult) // Working
 
-buildCard(lowResult) // not working
+buildTable(lowResult) // not working
 
 })
 
@@ -297,7 +386,7 @@ let medResult = actList.filter(activity => activity.price[0] == "Medium" || acti
 
 console.log("medResult", medResult) // Working
 
-buildCard(medResult) // not working
+buildTable(medResult) // not working
 
 })
 
@@ -309,7 +398,7 @@ let expResult = actList.filter(activity => activity.price[0] == "Expensive" || a
 
 console.log("expResult", expResult) // Working
 
-buildCard(expResult) // not working
+buildTable(expResult) // not working
 
 })
 
