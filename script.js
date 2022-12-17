@@ -38,28 +38,16 @@ let actList;
 
 let result;
 
-// const fs = require('fs');
-
-// fs.readFile('db.json', 'utf8', (err, data) => {
-//     if(err){
-//         console.error(err);
-//         return;
-//     }
-//     console.log(data)
-
-// })
+// Aquantince help code
 
 
-// function addNewActivity(newActivityObj){
 
-//     fs.writeFile('db.json', newActivityObj, err => {
-//         if (err){
-//             console.err;
-//             return;
-//         }
-//     })
 
-// } 
+
+
+
+
+
 
 
 form.addEventListener("submit", (event) => {
