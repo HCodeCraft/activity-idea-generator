@@ -401,20 +401,32 @@
       "id": 26
     },
     {
-      "newActivityObj": {
-        "activity": "Testing",
-        "type": [
-          "Relaxation"
-        ],
-        "participants": [
-          "1"
-        ],
-        "price": [
-          "Free"
-        ],
-        "link": ""
-      },
+      "activity": "Test Code",
+      "type": [
+        "Relaxation"
+      ],
+      "participants": [
+        "1"
+      ],
+      "price": [
+        "Free"
+      ],
+      "link": "",
       "id": 27
+    },
+    {
+      "activity": "Hanna",
+      "type": [
+        "Relaxation"
+      ],
+      "participants": [
+        "3"
+      ],
+      "price": [
+        "Free"
+      ],
+      "link": "",
+      "id": 28
     }
   ]
 }

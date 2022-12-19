@@ -85,7 +85,7 @@ fetch('db.json')
             Accept: "application/json",
             "Content-Type": "application/json",
           },
-          body:JSON.stringify({newActivityObj}),
+          body:JSON.stringify(newActivityObj),
         });
       };
     
@@ -152,8 +152,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
     
 
    let actList = data.activities
+    console.log("actList", actList)
 
-   console.log(actList)
+    console.log("actList[0].activity", actList[0].activity)
 
    // Random
    randomBtn.addEventListener("click" , (event) => {
@@ -229,7 +230,7 @@ buildTable(twoResult) // not working
 
 threeLink.addEventListener("click", (event) => {
 console.log("threeLink", threeLink)
-let threeResult = actList.filter(activity => activity.participants[1] == "3" || activity.participants[2] == "3" || activity.participants[3]== "3");
+let threeResult = actList.filter(activity => activity.participants[0] == "3" || activity.participants[1] == "3" || activity.participants[2]== "3");
 
 console.log("threeResult", threeResult) // Working
 
