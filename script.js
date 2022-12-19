@@ -28,7 +28,7 @@ const exLink = document.querySelector('.excersize')
 const relLink = document.querySelector('.relaxation')
 
 let myTable = document.querySelector('#table');
-let headers = ['Activity', 'Type', 'People', 'Price', 'Link', 'Index']
+let headers = ['Activity', 'Type', 'People', 'Price', 'Link', 'Id']
 
 const randomBtn = document.querySelector('#random')
 
@@ -40,7 +40,16 @@ let result;
 
 // Aquantince help code
 
-
+// const addObject = async () => {
+//     await fetch("http://localhost:3000/add", {
+//       method: "POST",
+//       headers: {
+//         Accept: "application/json",
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify({ didit: "work?" }),
+//     });
+//   };
 
 
 
@@ -65,13 +74,23 @@ fetch('db.json')
         type: [type.value],
         participants: [participants.value],
         price: [price.value],
-        link: event.target.link.value ,
+        link: event.target.link.value
+        // index: (activities.legnth)+1
        
     }
+    const addObject = () => {
+          fetch("http://localhost:3000/activities", {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body:JSON.stringify({newActivityObj}),
+        });
+      };
+    
 
-    addNewActivity(newActivityObj)
-
-
+addObject()
 
 })})
 
@@ -133,6 +152,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
     
 
    let actList = data.activities
+
+   console.log(actList)
 
    // Random
    randomBtn.addEventListener("click" , (event) => {
@@ -219,6 +240,7 @@ buildTable(threeResult) // not working
 // Relaxation
 
 relLink.addEventListener("click", (event) => {
+console.log(event)
 console.log("relLink", relLink)
 let relResult = actList.filter(activity => activity.type[0] == "Relaxation" || activity.type[1]== "Relaxation");
 
