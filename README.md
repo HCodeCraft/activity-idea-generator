@@ -7,4 +7,4 @@ Dropdown menu code - from Simplilern on Youtube - https://www.youtube.com/watch?
 
 Result table code (for the dropdown menu) - from KodeBase on Youtube - https://www.youtube.com/watch?v=Wcr_bbMm3J0
 
-Cat graphics - Author user15679204 on freepik 
+

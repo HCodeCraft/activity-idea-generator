@@ -401,12 +401,12 @@
       "id": 26
     },
     {
-      "activity": "Test Code",
+      "activity": "Play Pickle Ball",
       "type": [
-        "Relaxation"
+        "Excersize"
       ],
       "participants": [
-        "1"
+        "2"
       ],
       "price": [
         "Free"
@@ -415,18 +415,60 @@
       "id": 27
     },
     {
-      "activity": "Hanna",
+      "activity": "Sing along to your favorite song",
       "type": [
-        "Relaxation"
+        "Entertainment"
       ],
       "participants": [
-        "3"
+        "1"
       ],
       "price": [
         "Free"
       ],
       "link": "",
       "id": 28
+    },
+    {
+      "activity": "Dance to a song",
+      "type": [
+        "Entertainment"
+      ],
+      "participants": [
+        "Variable"
+      ],
+      "price": [
+        "Free"
+      ],
+      "link": "",
+      "id": 29
+    },
+    {
+      "activity": "Research a recipe you want to make",
+      "type": [
+        "Food"
+      ],
+      "participants": [
+        "1"
+      ],
+      "price": [
+        "Free"
+      ],
+      "link": "",
+      "id": 30
+    },
+    {
+      "activity": "Make a snack to eat now or later",
+      "type": [
+        "Food"
+      ],
+      "participants": [
+        "1"
+      ],
+      "price": [
+        "Free"
+      ],
+      "link": "",
+      "id": 31
     }
   ]
 }
