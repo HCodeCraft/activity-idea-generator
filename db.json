@@ -469,6 +469,20 @@
       ],
       "link": "",
       "id": 31
+    },
+    {
+      "activity": "Read a book for 30 minutes",
+      "type": [
+        "Learning"
+      ],
+      "participants": [
+        "1"
+      ],
+      "price": [
+        "Free"
+      ],
+      "link": "",
+      "id": 32
     }
   ]
 }

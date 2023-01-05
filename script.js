@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
    randomBtn.addEventListener("click" , (event) => {
 
-    let rndmNum = actList[actList.length * Math.random() | 0] 
+    let rndmNum = actList[actList.length * Math.random() || 0] 
 
     let table = document.createElement('table');
     let headerRow = document.createElement('tr');
