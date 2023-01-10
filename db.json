@@ -497,6 +497,20 @@
       ],
       "link": "",
       "id": 33
+    },
+    {
+      "activity": "Walk to a park",
+      "type": [
+        "Excersize"
+      ],
+      "participants": [
+        "1"
+      ],
+      "price": [
+        "Free"
+      ],
+      "link": "",
+      "id": 34
     }
   ]
 }

@@ -1,5 +1,4 @@
 
-
 const form = document.getElementById('form') 
 
 let aname = document.getElementById('aname')
@@ -41,13 +40,6 @@ let result;
 form.addEventListener("submit", (event) => {
 event.preventDefault()
 
-fetch('db.json')
-.then(res => res.json())
-.then(data => {
-    console.log(data)
-
-    actList = data.activities
-
     let newActivityObj = {
         activity: event.target.aname.value,
         type: [type.value],
@@ -68,9 +60,9 @@ fetch('db.json')
       };
     
 
-addObject()
+        addObject()
 
-})})
+})
 
 
 
@@ -150,9 +142,12 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
     let row = document.createElement('tr'); 
       
-
+console.log("Object values rndmNum", Object.values(rndmNum))
+console.log("rndmNum", rndmNum)
     
     Object.values(rndmNum).forEach(value => {
+
+    
 
         let cell = document.createElement('td');
         let textNode = document.createTextNode(value);
