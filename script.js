@@ -71,7 +71,6 @@ function buildTable(results) {
 
   table.appendChild(headerRow);
 
-  console.log("Results", results);
   results.forEach((result) => {
     let row = document.createElement("tr");
 
@@ -89,7 +88,6 @@ function buildTable(results) {
 }
 
 document.addEventListener("DOMContentLoaded", (e) => {
-  console.log("The DOM content has been loaded!");
   fetch("db.json")
     .then((res) => res.json())
     .then((data) => {
