@@ -40,6 +40,7 @@ let result;
 form.addEventListener("submit", (event) => {
 event.preventDefault()
 
+
     let newActivityObj = {
         activity: event.target.aname.value,
         type: [type.value],
@@ -87,7 +88,7 @@ function buildTable(results){
     console.log("Results", results)
     results.forEach(result => {
         let row = document.createElement('tr');
-        console.log("Object Values for results", Object.values(results))
+
 
 
       
@@ -121,6 +122,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     
 
    let actList = data.activities
+   
 
 
    randomBtn.addEventListener("click" , (event) => {
@@ -142,10 +144,17 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
     let row = document.createElement('tr'); 
       
-console.log("Object values rndmNum", Object.values(rndmNum))
-console.log("rndmNum", rndmNum)
+
+
+    let rndmnmValues = []
+    for (let key in rndmNum){
+
+    rndmnmValues.push(rndmNum[key])
+    }
+
+
     
-    Object.values(rndmNum).forEach(value => {
+    rndmnmValues.forEach(value => {
 
     
 
@@ -173,7 +182,7 @@ myTable.appendChild(table);
 
 
 onePersonLink.addEventListener("click", (event) => {
-console.log("onePersonLink", onePersonLink)
+
 let oneResult = actList.filter(activity => activity.participants == "1");
 
 
@@ -186,16 +195,14 @@ twoPeopleLink.addEventListener("click", (event) => {
 
 let twoResult = actList.filter(activity => activity.participants[0] == "2" || activity.participants[1] == "2");
 
-
 buildTable(twoResult) 
 
 })
 
 
 threeLink.addEventListener("click", (event) => {
-console.log("threeLink", threeLink)
-let threeResult = actList.filter(activity => activity.participants[0] == "3" || activity.participants[1] == "3" || activity.participants[2]== "3");
 
+let threeResult = actList.filter(activity => activity.participants[0] == "3" || activity.participants[1] == "3" || activity.participants[2]== "3");
 
 buildTable(threeResult) 
 
@@ -204,10 +211,8 @@ buildTable(threeResult)
 
 
 relLink.addEventListener("click", (event) => {
-console.log(event)
-console.log("relLink", relLink)
-let relResult = actList.filter(activity => activity.type[0] == "Relaxation" || activity.type[1]== "Relaxation");
 
+let relResult = actList.filter(activity => activity.type[0] == "Relaxation" || activity.type[1]== "Relaxation");
 
 buildTable(relResult) 
 
@@ -217,9 +222,8 @@ buildTable(relResult)
 
 
 exLink.addEventListener("click", (event) => {
-console.log("exLink", exLink)
-let exResult = actList.filter(activity => activity.type[0] == "Excersize" || activity.type[1] == "Excersize");
 
+let exResult = actList.filter(activity => activity.type[0] == "Excersize" || activity.type[1] == "Excersize");
 
 buildTable(exResult) 
 
@@ -229,7 +233,7 @@ buildTable(exResult)
 
 
 artLink.addEventListener("click", (event) => {
-console.log("artLink", artLink)
+
 let artResult = actList.filter(activity => activity.type[0]== "Art" || activity.type[1] == "Art");
 
 
@@ -241,9 +245,8 @@ buildTable(artResult)
 
 
 leaLink.addEventListener("click", (event) => {
-console.log("leaLink", leaLink)
-let leaResult = actList.filter(activity => activity.type[0] == "Learning" || activity.type[1] == "Learning");
 
+let leaResult = actList.filter(activity => activity.type[0] == "Learning" || activity.type[1] == "Learning");
 
 buildTable(leaResult) 
 
@@ -252,9 +255,8 @@ buildTable(leaResult)
 
 
 entLink.addEventListener("click", (event) => {
-console.log("entLink", entLink)
-let entResult = actList.filter(activity => activity.type[0] == "Entertainment" || activity.type[1] == "Entertainment");
 
+let entResult = actList.filter(activity => activity.type[0] == "Entertainment" || activity.type[1] == "Entertainment");
 
 buildTable(entResult) 
 
@@ -262,9 +264,8 @@ buildTable(entResult)
 
 
 orgLink.addEventListener("click", (event) => {
-console.log("orgLink", orgLink)
-let orgResult = actList.filter(activity => activity.type[0] == "Organizing" || activity.type[1] == "Organizing");
 
+let orgResult = actList.filter(activity => activity.type[0] == "Organizing" || activity.type[1] == "Organizing");
 
 buildTable(orgResult) 
 
@@ -274,9 +275,8 @@ buildTable(orgResult)
 
 
 foodLink.addEventListener("click", (event) => {
-console.log("foodLink", foodLink)
-let foodResult = actList.filter(activity => activity.type[0] == "Food" || activity.type[1] == "Food");
 
+let foodResult = actList.filter(activity => activity.type[0] == "Food" || activity.type[1] == "Food");
 
 buildTable(foodResult) 
 
@@ -285,9 +285,8 @@ buildTable(foodResult)
 
 
 shopLink.addEventListener("click", (event) => {
-console.log("shopLink", shopLink)
-let shopResult = actList.filter(activity => activity.type[0] == "Shopping" || activity.type[1] == "Shopping");
 
+let shopResult = actList.filter(activity => activity.type[0] == "Shopping" || activity.type[1] == "Shopping");
 
 buildTable(shopResult) 
 
@@ -296,9 +295,8 @@ buildTable(shopResult)
 
 
 socialLink.addEventListener("click", (event) => {
-console.log("socialLink", socialLink)
-let shopResult = actList.filter(activity => activity.type[0] == "Social" || activity.type[1] == "Social");
 
+let shopResult = actList.filter(activity => activity.type[0] == "Social" || activity.type[1] == "Social");
 
 buildTable(shopResult) 
 
@@ -308,9 +306,8 @@ buildTable(shopResult)
 
 
 varLink.addEventListener("click", (event) => {
-console.log("varLink", varLink)
-let varResult = actList.filter(activity => activity.price[0] == "Variable" || activity.price[1] == "Variable" || activity.price[2] == "Variable");
 
+let varResult = actList.filter(activity => activity.price[0] == "Variable" || activity.price[1] == "Variable" || activity.price[2] == "Variable");
 
 buildTable(varResult) 
 
@@ -319,20 +316,17 @@ buildTable(varResult)
 
 
 freeLink.addEventListener("click", (event) => {
-console.log("freeLink", freeLink)
+
 let freeResult = actList.filter(activity => activity.price[0] == "Free" || activity.price[1] == "Free" || activity.price[2]== "Free");
 
-console.log("freeResult", freeResult) 
 
 buildTable(freeResult) 
 })
 
 
 lowLink.addEventListener("click", (event) => {
-console.log("lowLink", lowLink)
-let lowResult = actList.filter(activity => activity.price[0] == "Low" || activity.price[1] == "Low");
 
-console.log("lowResult", lowResult) 
+let lowResult = actList.filter(activity => activity.price[0] == "Low" || activity.price[1] == "Low");
 
 buildTable(lowResult) 
 
@@ -353,9 +347,8 @@ buildTable(medResult)
 
 
 expLink.addEventListener("click", (event) => {
-console.log("expLink", expLink)
-let expResult = actList.filter(activity => activity.price[0] == "Expensive" || activity.price[1] == "Expensive" || activity.price[2] == "Expensive" || activity.price[3] == "Expensive");
 
+let expResult = actList.filter(activity => activity.price[0] == "Expensive" || activity.price[1] == "Expensive" || activity.price[2] == "Expensive" || activity.price[3] == "Expensive");
 
 buildTable(expResult) 
 
