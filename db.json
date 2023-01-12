@@ -525,6 +525,20 @@
       ],
       "link": "",
       "id": 35
+    },
+    {
+      "activity": "Light a candle",
+      "type": [
+        "Relaxation"
+      ],
+      "participants": [
+        "1"
+      ],
+      "price": [
+        "Variable"
+      ],
+      "link": "",
+      "id": 36
     }
   ]
 }
