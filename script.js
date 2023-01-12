@@ -128,162 +128,149 @@ document.addEventListener("DOMContentLoaded", (e) => {
       });
 
       onePersonLink.addEventListener("click", (event) => {
-        let oneResult = actList.filter(
-          (activity) => activity.participants == "1"
-        );
+        let oneResult = actList.filter((activity) => {
+          activity.participants == "1";
+        });
 
         buildTable(oneResult);
       });
 
       twoPeopleLink.addEventListener("click", (event) => {
-        let twoResult = actList.filter(
-          (activity) =>
-            activity.participants[0] == "2" || activity.participants[1] == "2"
-        );
+        let twoResult = actList.filter((activity) => {
+          activity.participants[0] == "2" || activity.participants[1] == "2";
+        });
 
         buildTable(twoResult);
       });
 
       threeLink.addEventListener("click", (event) => {
-        let threeResult = actList.filter(
-          (activity) =>
-            activity.participants[0] == "3" ||
-            activity.participants[1] == "3" ||
-            activity.participants[2] == "3"
-        );
+        let threeResult = actList.filter((activity) => {
+          activity.participants[0] == "3" ||
+          activity.participants[1] == "3" ||
+          activity.participants[2] == "3";
+        });
 
         buildTable(threeResult);
       });
 
       relLink.addEventListener("click", (event) => {
-        let relResult = actList.filter(
-          (activity) =>
-            activity.type[0] == "Relaxation" || activity.type[1] == "Relaxation"
-        );
+        let relResult = actList.filter((activity) => {
+          activity.type[0] == "Relaxation" || activity.type[1] == "Relaxation";
+        });
 
         buildTable(relResult);
       });
 
       exLink.addEventListener("click", (event) => {
-        let exResult = actList.filter(
-          (activity) =>
-            activity.type[0] == "Excersize" || activity.type[1] == "Excersize"
-        );
+        let exResult = actList.filter((activity) => {
+          activity.type[0] == "Excersize" || activity.type[1] == "Excersize";
+        });
 
         buildTable(exResult);
       });
 
       artLink.addEventListener("click", (event) => {
-        let artResult = actList.filter(
-          (activity) => activity.type[0] == "Art" || activity.type[1] == "Art"
-        );
+        let artResult = actList.filter((activity) => {
+          activity.type[0] == "Art" || activity.type[1] == "Art";
+        });
 
         buildTable(artResult);
       });
 
       leaLink.addEventListener("click", (event) => {
-        let leaResult = actList.filter(
-          (activity) =>
-            activity.type[0] == "Learning" || activity.type[1] == "Learning"
-        );
+        let leaResult = actList.filter((activity) => {
+          activity.type[0] == "Learning" || activity.type[1] == "Learning";
+        });
 
         buildTable(leaResult);
       });
 
       entLink.addEventListener("click", (event) => {
-        let entResult = actList.filter(
-          (activity) =>
-            activity.type[0] == "Entertainment" ||
-            activity.type[1] == "Entertainment"
-        );
+        let entResult = actList.filter((activity) => {
+          activity.type[0] == "Entertainment" ||
+          activity.type[1] == "Entertainment";
+        });
 
         buildTable(entResult);
       });
 
       orgLink.addEventListener("click", (event) => {
-        let orgResult = actList.filter(
-          (activity) =>
-            activity.type[0] == "Organizing" || activity.type[1] == "Organizing"
-        );
+        let orgResult = actList.filter((activity) => {
+          activity.type[0] == "Organizing" || activity.type[1] == "Organizing";
+        });
 
         buildTable(orgResult);
       });
 
       foodLink.addEventListener("click", (event) => {
-        let foodResult = actList.filter(
-          (activity) => activity.type[0] == "Food" || activity.type[1] == "Food"
-        );
+        let foodResult = actList.filter((activity) => {
+          activity.type[0] == "Food" || activity.type[1] == "Food";
+        });
 
         buildTable(foodResult);
       });
 
       shopLink.addEventListener("click", (event) => {
-        let shopResult = actList.filter(
-          (activity) =>
-            activity.type[0] == "Shopping" || activity.type[1] == "Shopping"
-        );
+        let shopResult = actList.filter((activity) => {
+          activity.type[0] == "Shopping" || activity.type[1] == "Shopping";
+        });
 
         buildTable(shopResult);
       });
 
       socialLink.addEventListener("click", (event) => {
-        let shopResult = actList.filter(
-          (activity) =>
-            activity.type[0] == "Social" || activity.type[1] == "Social"
-        );
+        let shopResult = actList.filter((activity) => {
+          activity.type[0] == "Social" || activity.type[1] == "Social";
+        });
 
         buildTable(shopResult);
       });
 
       varLink.addEventListener("click", (event) => {
-        let varResult = actList.filter(
-          (activity) =>
-            activity.price[0] == "Variable" ||
-            activity.price[1] == "Variable" ||
-            activity.price[2] == "Variable"
-        );
+        let varResult = actList.filter((activity) => {
+          activity.price[0] == "Variable" ||
+          activity.price[1] == "Variable" ||
+          activity.price[2] == "Variable";
+        });
 
         buildTable(varResult);
       });
 
       freeLink.addEventListener("click", (event) => {
-        let freeResult = actList.filter(
-          (activity) =>
-            activity.price[0] == "Free" ||
-            activity.price[1] == "Free" ||
-            activity.price[2] == "Free"
-        );
+        let freeResult = actList.filter((activity) => {
+          activity.price[0] == "Free" ||
+          activity.price[1] == "Free" ||
+          activity.price[2] == "Free";
+        });
 
         buildTable(freeResult);
       });
 
       lowLink.addEventListener("click", (event) => {
-        let lowResult = actList.filter(
-          (activity) => activity.price[0] == "Low" || activity.price[1] == "Low"
-        );
+        let lowResult = actList.filter((activity) => {
+          activity.price[0] == "Low" || activity.price[1] == "Low";
+        });
 
         buildTable(lowResult);
       });
 
       medLink.addEventListener("click", (event) => {
-        let medResult = actList.filter(
-          (activity) =>
-            activity.price[0] == "Medium" ||
-            activity.price[1] == "Medium" ||
-            activity.price[2] == "Medium"
-        );
+        let medResult = actList.filter((activity) => {
+          activity.price[0] == "Medium" ||
+          activity.price[1] == "Medium" ||
+          activity.price[2] == "Medium";
+        });
 
         buildTable(medResult);
       });
 
       expLink.addEventListener("click", (event) => {
-        let expResult = actList.filter(
-          (activity) =>
-            activity.price[0] == "Expensive" ||
+        let expResult = actList.filter((activity) => {
+          activity.price[0] == "Expensive" ||
             activity.price[1] == "Expensive" ||
             activity.price[2] == "Expensive" ||
-            activity.price[3] == "Expensive"
-        );
+            activity.price[3] == "Expensive";
+        });
 
         buildTable(expResult);
       });
